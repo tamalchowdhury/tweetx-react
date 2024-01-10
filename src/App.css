@@ -18,10 +18,11 @@ body {
   padding-block: 10px;
   padding-inline: 50px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .button.primary {
-  background: var(--accent-color);
+  background: #ff748d;
   color: #fff;
   border: 0;
   padding-inline: 30px;
