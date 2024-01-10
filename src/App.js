@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx } from "@emotion/react"
+import { css } from "@emotion/react"
+import "./App.css"
+
+const accentColor = "#ff889c"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <h1
+        css={{
+          color: accentColor,
+        }}
+      >
+        TweetX
+      </h1>
+      <button className="button">Login</button>
+      <div>
+        <h2>Create Account</h2>
+        <form>
+          <div>
+            <input type="text" id="name" placeholder="Name" />
+          </div>
+          <div>
+            <input type="email" id="email" placeholder="Email" />
+          </div>
+          <div>
+            <input type="password" id="new-password" placeholder="Password" />
+          </div>
+          <div>
+            <input
+              type="password"
+              id="confirm-password"
+              placeholder="Confirm Password"
+            />
+          </div>
+          <button className="button primary" type="submit">
+            Sign Up
+          </button>
+        </form>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
